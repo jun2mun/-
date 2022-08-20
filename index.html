@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            height : {
+              '200' : '800px'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <div id="_water_wrapper" class="grid grid-cols-1 justify-items-center content-center h-screen">
+      <div id="_water_container" class="md:w-1/2">
+        <div id="_water_mobile_container" class="flex justify-center">
+          <div class="w-96 border">
+            <!-- 제목 들어갈 곳-->
+            <div id="_water_mobile_header" class=" text-center">
+
+            </div>
+            <!-- 내용 content 들어갈 곳-->
+            <div id="_water_mobile_body" class="">
+
+              <div id="_water_mobile_image" class=""></div> <!-- background.js-->
+              
+              <div id="_water_mobile_comment" class=""></div> <!-- comment.js -->
+
+              <div id="_water_mobile_location_comment" class=""></div> <!-- location_comment.js-->
+
+              <div id="_water_mobile_location_icon" class="flex justify-center"></div> <!-- location_icon.js-->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+
+    <script type="module" src="./js/constant/random.js"></script>
+    <script type="module" src="./js/constant/image_content.js"></script>
+
+    <script type="module" src="./js/component/background.js"></script>
+    <script type="module" src="./js/component/comment.js"></script>
+    <script type="module" src="./js/component/location_comment.js"></script>
+    <script type="module" src="./js/component/location_icon.js"></script>
+
+  </body>
+</html>
